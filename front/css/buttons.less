@@ -1,0 +1,22 @@
+button{
+    border: 0;
+    line-height: 40px;
+    padding: 0 20px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 150px;
+
+    &.primary{
+        background: @primary;
+    }
+
+    &.secondary{
+        background: @secondary;
+    }
+
+    &:disabled{
+        background: @grey;
+    }
+}

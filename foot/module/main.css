@@ -1,0 +1,269 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+input {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  background: white;
+  font-size: 14px;
+}
+select {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  background: white;
+  cursor: pointer;
+}
+button {
+  border: 0;
+  line-height: 40px;
+  padding: 0 20px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 150px;
+}
+button.primary {
+  background: #E91E63;
+}
+button.secondary {
+  background: #3F51B5;
+}
+button:disabled {
+  background: #999999;
+}
+.scheduler .content {
+  display: flex;
+}
+.scheduler .content .column {
+  height: 100%;
+  flex-grow: 1;
+}
+.scheduler .content .column .slot {
+  padding: 1px;
+}
+.scheduler .content .column .slot .slot-content {
+  background: #e4e7f6;
+  color: #8591d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+.scheduler .content .column .slot .slot-content:hover {
+  background: #f7f8fc;
+}
+.scheduler .content .column .slot.booked .slot-content {
+  background: transparent;
+  color: #abb4e2;
+}
+.scheduler .content .column .slot.selected .slot-content {
+  background: #E91E63;
+  color: white;
+}
+.scheduler .content .column .slot.header .slot-content {
+  background: #3F51B5;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  color: #666666;
+}
+header {
+  background: #3F51B5;
+  line-height: 30px;
+  height: 30px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+header .logo:before {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+header .logo:after {
+  content: "LOGO";
+  vertical-align: middle;
+  font-weight: 900;
+  display: inline-block;
+  margin: 4px 0 0 15px;
+}
+main {
+  box-sizing: border-box;
+  background: #F2F2F2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+main::-webkit-scrollbar {
+  width: 12px;
+}
+main::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+main::-webkit-scrollbar-thumb {
+  background: #999999;
+  border: 4px solid #F2F2F2;
+}
+main section {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+main section .content {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+a {
+  color: #E91E63;
+  text-decoration: none;
+}

@@ -1,0 +1,56 @@
+.scheduler{
+
+    .content {
+        display: flex;
+
+        .column{
+            height: 100%;
+            flex-grow: 1;
+
+            .slot{
+                padding: 1px;
+
+                .slot-content{
+                    background: lighten( @secondary, 45% );
+                    color: lighten( @secondary, 20% );
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 14px;
+
+                    &:hover{
+                        background: lighten( @secondary, 50% );
+                    }
+                }
+
+                &.booked{
+                    .slot-content{
+                        background: transparent;
+                        color: lighten( @secondary, 30% );
+                    }
+                }
+
+                &.selected{
+                    .slot-content{
+                        background: @primary;
+                        color: white;
+                    }
+                }
+
+                &.header {
+                    .slot-content{
+                        background: @secondary;
+                        height: 60px;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: capitalize;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}

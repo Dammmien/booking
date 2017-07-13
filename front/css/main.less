@@ -1,0 +1,90 @@
+@import "reset";
+@import "colors";
+
+@import "inputs";
+@import "select";
+@import "buttons";
+
+// @import "../booking/booking.less";
+// @import "../login/login.less";
+// @import "../admin/admin.less";
+@import "./components/scheduler.less";
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    color: @darkGrey;
+}
+
+header{
+    background: @secondary;
+    line-height: 30px;
+    height: 30px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+
+    .logo {
+        &:before{
+            content: "";
+            vertical-align: middle;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        &:after{
+            content: "LOGO";
+            vertical-align: middle;
+            font-weight: 900;
+            display: inline-block;
+            margin: 4px 0 0 15px;
+        }
+    }
+}
+
+main {
+    box-sizing: border-box;
+    background: @light;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: @light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: @grey;
+        border: 4px solid @light;
+    }
+
+    section {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+
+        .content{
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px 0 rgba( 0, 0, 0, 0.1 );
+        }
+    }
+}
+
+a{
+    color: @primary;
+    text-decoration: none;
+}
