@@ -3,8 +3,9 @@ const Stripe = require('./Stripe');
 
 module.exports = class BookingRoute {
 
-    constructor(db) {
+    constructor(db, mailer) {
         this.db = db;
+        this.mailer = mailer;
         this.collection = this.db.collection('bookings');
         this.stripe = new Stripe();
     }
@@ -14,6 +15,7 @@ module.exports = class BookingRoute {
             if (!err) {
                 this.stripe.createCharge(req.body.token.id, 10000, `Payment for booking : ${result.ops[0]._id}`)
                 res.send(result.ops[0]);
+                this.mailer.sendBookingSuccess(req.body.token.email);
             }
         });
     }

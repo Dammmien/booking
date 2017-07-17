@@ -18,6 +18,8 @@
     "express": "^4.15.2",
     "jsonwebtoken": "^7.4.1",
     "mongodb": "^2.2.25",
+    "mustache": "^2.3.0",
+    "node-mailjet": "^3.1.0",
     "stripe": "^4.23.1"
   }
 }

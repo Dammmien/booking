@@ -33,7 +33,6 @@ class App extends Inferno.Component {
 	}
 
 	render() {
-		console.log( this.getTemplate() );
 		return this.getTemplate();
 	}
 

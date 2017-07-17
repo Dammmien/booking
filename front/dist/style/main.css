@@ -161,6 +161,31 @@ button.secondary {
 button:disabled {
   background: #999999;
 }
+#login .form,
+#signin .form {
+  width: 300px;
+  margin: 100px auto;
+}
+#login .form input,
+#signin .form input {
+  display: block;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+#login .form input:-webkit-autofill,
+#signin .form input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+}
+#login .form button,
+#signin .form button {
+  width: 100%;
+}
+#login .form .sign-link,
+#signin .form .sign-link {
+  text-align: center;
+  color: #666666;
+  margin: 20px 0 0 0;
+}
 .scheduler .content {
   display: flex;
 }

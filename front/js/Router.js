@@ -14,7 +14,6 @@ class Router {
 	setCurrentRoute() {
 		const matchingRoute = this.findMatchingRoute(window.location.hash);
 		this.currentRoute = matchingRoute ? matchingRoute : this.findMatchingRoute('#/');
-		console.log( this.currentRoute );
 		this.subscriptions.forEach( fn => fn(this.lastRoute, this.currentRoute) );
 	}
 

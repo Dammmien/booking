@@ -1,9 +1,11 @@
 class Service {
 
-	constructor() {}
+	constructor() {
+    this.base_url = 'http://localhost:9000/api/v1/public';
+  }
 
 	fetchBookable(company_id, bookable_id) {
-		fetch(`http://localhost:9000/companies/${company_id}/bookables/${bookable_id}`).then(
+		fetch(`${this.base_url}/companies/${company_id}/bookables/${bookable_id}`).then(
 			resp => resp.json()
 		).then(
 			data => store.set('bookable', data)
@@ -11,7 +13,7 @@ class Service {
 	}
 
 	fetchBookings(company_id, bookable_id, start, end) {
-		let url = new URL(`http://localhost:9000/companies/${company_id}/bookables/${bookable_id}/bookings`);
+		let url = new URL(`${this.base_url}/companies/${company_id}/bookables/${bookable_id}/bookings`);
 		url.searchParams.append("start", start);
 		url.searchParams.append("end", end);
 
@@ -23,7 +25,7 @@ class Service {
 	}
 
 	bookSlot(company_id, bookable_id, slot, token) {
-		return fetch(`http://localhost:9000/companies/${company_id}/bookables/${bookable_id}/bookings`, {
+		return fetch(`${this.base_url}/companies/${company_id}/bookables/${bookable_id}/bookings`, {
 			method: 'POST',
 			headers: new Headers({
 				'Content-Type': 'application/json',
